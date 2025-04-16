@@ -25,7 +25,7 @@ export async function signIn(formData: FormData): Promise<ActionResponse> {
     }
 
     // Find user by email
-    const user = await getUserByEmail(data.email)
+    const user = await getUserByEmail()
     if (!user) {
       return {
         success: false,
@@ -85,7 +85,7 @@ export async function signUp(formData: FormData): Promise<ActionResponse> {
     }
 
     // Check if user already exists
-    const existingUser = await getUserByEmail(data.email)
+    const existingUser = await getUserByEmail()
     if (existingUser) {
       return {
         success: false,

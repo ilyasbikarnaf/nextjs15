@@ -19,7 +19,7 @@ export default function NavLink({ href, icon, label, isActive }: NavLinkProps) {
           : 'text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800'
       )}
     >
-      <span className="text-gray-500 dark:text-gray-400 mr-3">{icon}</span>
+      <span className="mr-3 text-gray-500 dark:text-gray-400">{icon}</span>
       <span className="hidden md:inline">{label}</span>
     </Link>
   )
