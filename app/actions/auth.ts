@@ -126,7 +126,7 @@ export async function signUp(formData: FormData): Promise<ActionResponse> {
     }
 
     const user = await createUser(data.email, data.password)
-    if (!user) {
+    if (user) {
       return {
         success: false,
         message: 'try again',
